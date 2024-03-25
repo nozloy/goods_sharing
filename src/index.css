@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+	.footerButton {
+		@apply flex flex-col items-center justify-center
+		motion-reduce:transition-none transition duration-150 ease-in-out
+		active:text-light-green-400 focus:text-green-500;
+	}
+	.itemsCard {
+		@apply rounded-xl shadow-lg h-auto w-[90%] p-5 m-5
+		 text-blue-gray-600 font-body font-normal;
+	}
+}
+
 body {
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -9,6 +21,8 @@ body {
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	--tw-bg-opacity: 1;
+	background-color: rgb(55 71 79 / var(--tw-bg-opacity));
 }
 
 code {
